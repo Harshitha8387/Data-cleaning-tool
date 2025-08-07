@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Cleaner (Client-Side)</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <h1>Dataset Cleaning Utility</h1>
+        <p class="subtitle">Upload your CSV file to remove duplicates and empty rows directly in your browser.</p>
+
+        <div class="upload-area">
+            <label for="fileInput" class="custom-file-upload">
+                <span id="fileName">Choose CSV File...</span>
+                <input type="file" id="fileInput" accept=".csv">
+            </label>
+        </div>
+
+        <button id="cleanBtn" class="btn btn-primary">Clean Dataset</button>
+
+        <div class="status-area">
+            <p id="status" class="message"></p>
+        </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

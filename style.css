@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #4CAF50; /* A professional green */
+    --primary-hover-color: #45a049;
+    --secondary-color: #2196F3; /* A calming blue */
+    --secondary-hover-color: #1976D2;
+    --text-dark: #333;
+    --text-light: #555;
+    --background-light: #f8f9fa;
+    --card-background: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 550px;
+    width: 90%;
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.upload-area {
+    margin-bottom: 30px;
+}
+
+/* Custom file input styling */
+.custom-file-upload {
+    display: inline-block;
+    background-color: var(--card-background);
+    color: var(--text-dark);
+    padding: 12px 20px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    width: calc(100% - 40px); /* Adjust based on padding */
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+}
+
+.custom-file-upload:hover {
+    border-color: var(--primary-color);
+    background-color: #e6f7e6; /* Very light green */
+}
+
+.custom-file-upload input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For download link */
+    display: inline-block; /* For download link */
+    min-width: 180px; /* Ensure buttons have consistent width */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: 25px; /* Added margin for spacing */
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover-color);
+    transform: translateY(-2px);
+}
+
+/* Status message styles */
+.status-area {
+    margin-top: 30px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95em;
+    display: inline-block; /* Allows vertical margin */
+    margin: 10px 0;
+}
+
+.message.success {
+    background-color: #d4edda; /* Light green background */
+    color: var(--success-color); /* Dark green text */
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da; /* Light red background */
+    color: var(--error-color); /* Dark red text */
+    border: 1px solid #f5c6cb;
+}
+
+/* Loader (optional, but good for UX) */
+.loading-spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid var(--primary-color); /* Primary color */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+    margin: 15px auto;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
